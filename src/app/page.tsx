@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import NavbarComponent from "../app/components/NavbarComponent"
+import Footer from "./components/Footer";
 
 //AOS
 import AOS from 'aos'
@@ -35,6 +36,7 @@ function Home() {
             <div className="items-center text-center mt-20">
                 <h1 data-aos="fade-up" className="text-4xl text-black font-bold">Clothing Made For Developers</h1>
             </div>
+            <Footer />
         </div>
     );
 }
