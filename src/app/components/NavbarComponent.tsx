@@ -23,7 +23,6 @@ function navbar() {
             <NavbarContent className="justify-end">
                 <div className="flex gap-[1vw]">
                     <Link href="/" className="cursor-pointer text-black transition-all duration-300 ease-in-out hover:underline">Home</Link>
-                    <Link href="/about" className="cursor-pointer text-black transition-all duration-300 ease-in-out hover:underline">About</Link>
                     <Link href="/products" className="cursor-pointer text-black transition-all duration-300 ease-in-out hover:underline">Products</Link>
                     <Button as={Link} href="https://codeswagcentral.etsy.com" color="danger">Shop on Etsy</Button>
                 </div>
