@@ -59,11 +59,13 @@ const Page = () => {
     return (
         <div className='bg-white text-black'>
             <NavbarComponent />
-            <div className="grid sm:grid-cols-4 grid-cols-1 mx-10vw gap-[2vw]">
+            <div className="grid sm:grid-cols-4 grid-cols-1 mx-[20px] gap-[2vw] my-[20px]">
                 {products.map((product) => (
                     <Card key={product.id}>
-                        <CardHeader>{product.title}</CardHeader>
-                        <CardFooter>{product.price}</CardFooter>
+                        <CardBody className='text-center items-center'>
+                            <CardHeader className="text-2xl font-bold">{product.title}</CardHeader>
+                            <CardFooter>{product.price}</CardFooter>
+                        </CardBody>
                     </Card>
                 ))}
             </div>

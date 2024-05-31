@@ -45,6 +45,20 @@ const featuredProducts: featuredProduct[] = [
         price: 20,
         image: "image src",
         link: "link to etsy"
+    },
+    {
+        id: 3,
+        title: "third product",
+        price: 20,
+        image: "image src",
+        link: "link to etsy"
+    },
+    {
+        id: 4,
+        title: "fourth product",
+        price: 20,
+        image: "image src",
+        link: "link to etsy"
     }
 ]
 
@@ -63,20 +77,22 @@ function Home() {
             </div>
 
             <div className="items-center text-center my-[30px]">
-                <h1 data-aos="fade-up" className="text-4xl text-black font-bold">Featured Products</h1>
-                <div className="grid sm:grid-cols-4 grid-cols-1 mx-10vw gap-[2vw]">
+                <h1 data-aos="fade-left" className="text-4xl text-black font-bold">Featured Products</h1>
+                <div className="grid sm:grid-cols-4 grid-cols-1 mx-[20px] gap-[2vw] my-[20px]">
                     {featuredProducts.map((product) => (
-                        <Card key={product.id}>
-                            <CardHeader>{product.title}</CardHeader>
-                            <CardFooter>{product.price}</CardFooter>
+                        <Card data-aos="flip-up" key={product.id}>
+                            <CardBody className="text-center items-center">
+                                <CardHeader className="text-2xl font-bold">{product.title}</CardHeader>
+                                <CardFooter>{product.price}</CardFooter>
+                            </CardBody>
                         </Card>
                     ))}
                 </div>
             </div>
 
             <div className="items-center text-center my-[30px]">
-                <h1 data-aos="fade-up" className="text-4xl text-black font-bold">Clothing Made For Developers</h1>
-                {/* images of shirts */}
+                <h1 data-aos="fade-right" className="text-4xl text-black font-bold">Clothing Made For Developers</h1>
+                <h1 className="text-5xl font-semibold text-black my-[100px]">demo images here with animations...</h1>
             </div>
             <Footer />
         </div>
