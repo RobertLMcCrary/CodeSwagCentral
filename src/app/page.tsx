@@ -83,6 +83,7 @@ function Home() {
                         <Card data-aos="flip-up" key={product.id}>
                             <CardBody className="text-center items-center">
                                 <CardHeader className="text-2xl font-bold">{product.title}</CardHeader>
+                                <Image src="/LogoSmall.png" className="w-[250px] h-[250px] border-solid border-blue-500 border-1" />
                                 <CardFooter>{product.price}</CardFooter>
                             </CardBody>
                         </Card>
