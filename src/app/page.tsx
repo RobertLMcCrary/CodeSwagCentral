@@ -26,7 +26,7 @@ import {
 type featuredProduct = {
     id: number,
     title: String,
-    price: number,
+    price: String,
     image: String,
     link: String,
 }
@@ -35,28 +35,28 @@ const featuredProducts: featuredProduct[] = [
     {
         id: 1,
         title: "first product",
-        price: 20,
+        price: "$20.00",
         image: "image src",
         link: "link to etsy"
     },
     {
         id: 2,
         title: "second product",
-        price: 20,
+        price: "$20.00",
         image: "image src",
         link: "link to etsy"
     },
     {
         id: 3,
         title: "third product",
-        price: 20,
+        price: "$20.00",
         image: "image src",
         link: "link to etsy"
     },
     {
         id: 4,
         title: "fourth product",
-        price: 20,
+        price: "$20.00",
         image: "image src",
         link: "link to etsy"
     }
@@ -76,13 +76,13 @@ function Home() {
                 <Image className="w-[100vw]" src="/CodeSwagCentral Banner.png" />
             </div>
 
-            <div className="items-center text-center my-[30px]">
+            <div className="items-center text-center my-[100px]">
                 <h1 data-aos="fade-left" className="text-4xl text-black font-bold">Featured Products</h1>
-                <div className="grid sm:grid-cols-4 grid-cols-1 mx-[20px] gap-[2vw] my-[20px]">
+                <div className="grid sm:grid-cols-4 grid-cols-1 mx-[20px] gap-[2vw] my-[50px]">
                     {featuredProducts.map((product) => (
                         <Card data-aos="flip-up" key={product.id}>
                             <CardBody className="text-center items-center">
-                                <CardHeader className="text-2xl font-bold">{product.title}</CardHeader>
+                                <CardHeader as={Link} href={product.link} className="text-3xl text-black font-bold">{product.title}</CardHeader>
                                 <Image src="/LogoSmall.png" className="w-[250px] h-[250px] border-solid border-blue-500 border-1" />
                                 <CardFooter>{product.price}</CardFooter>
                             </CardBody>
@@ -91,9 +91,12 @@ function Home() {
                 </div>
             </div>
 
-            <div className="items-center text-center my-[30px]">
-                <h1 data-aos="fade-right" className="text-4xl text-black font-bold">Clothing Made For Developers</h1>
-                <h1 className="text-5xl font-semibold text-black my-[100px]">demo images here with animations...</h1>
+            <div className="items-center flex flex-col gap-[50px] text-center my-[30px]">
+                <h1 data-aos="fade-left" className="text-4xl text-black font-bold">Some of our Designs</h1>
+                <Image data-aos-delay="500" data-aos="fade-right" src="/Vim = Chad.png" className="h-[70vh] border-solid border-slate-200 border-1" />
+                <Image data-aos-delay="500" data-aos="fade-left" src="/TypeScript  JavaScript.png" className="h-[70vh] border-solid border-slate-200 border-1" />
+                <Image data-aos-delay="500" data-aos="fade-right" src="/Windows  Linux.png" className="h-[70vh] border-solid border-slate-200 border-1" />
+                <Button as={Link} href="/products" color="danger">Shop All Products</Button>
             </div>
             <Footer />
         </div>
